@@ -31,10 +31,7 @@ public class ParamController {
 	@GET
 	@Path("name/{name}/department/{department}")
 	public Employee getEmployeeByNameAndDepartment(@PathParam("name") String name,@PathParam("department") String department) {	
-		System.out.println("Name:"+name);
-		System.out.println("Departement::"+department);
 		return paramService.getDetailsByNameAndDepartment(name,department);
-		
 	}
 	
 

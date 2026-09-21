@@ -9,6 +9,7 @@ public class Config extends ResourceConfig {
 	
 	public Config() {
 		register(ParamController.class);
+		register(QueryParamController.class);
 	}
 
 }
