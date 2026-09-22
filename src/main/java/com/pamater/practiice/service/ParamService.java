@@ -1,4 +1,6 @@
-package com.pamater.practiice;
+package com.pamater.practiice.service;
+
+import com.pamater.practiice.Employee;
 
 public interface ParamService {
 	

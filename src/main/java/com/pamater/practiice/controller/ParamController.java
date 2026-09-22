@@ -1,7 +1,9 @@
-package com.pamater.practiice;
+package com.pamater.practiice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.pamater.practiice.Employee;
+import com.pamater.practiice.service.ParamService;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -35,4 +37,4 @@ public class ParamController {
 	}
 	
 
-}
+} 

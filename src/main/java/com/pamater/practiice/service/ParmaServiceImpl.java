@@ -1,9 +1,11 @@
-package com.pamater.practiice;
+package com.pamater.practiice.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+
+import com.pamater.practiice.Employee;
 
 @Service
 public class ParmaServiceImpl implements ParamService {
