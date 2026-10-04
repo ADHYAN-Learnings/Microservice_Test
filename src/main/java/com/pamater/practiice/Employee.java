@@ -6,7 +6,7 @@ public class Employee {
 	private String name;
 	private String department;
 	private String designation;
-	private double Salary;
+	private double salary;
 	
 	public Employee() {
 		super();
@@ -18,7 +18,7 @@ public class Employee {
 		this.name = name;
 		this.department = department;
 		this.designation = designation;
-		Salary = salary;
+		this.salary = salary;
 	}
 	
 	public Long getId() {
@@ -34,13 +34,13 @@ public class Employee {
 		return designation;
 	}
 	public double getSalary() {
-		return Salary;
+		return salary;
 	}
 	
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", department=" + department + ", designation=" + designation
-				+ ", Salary=" + Salary + "]";
+				+ ", salary=" + salary + "]";
 	}
 
 }

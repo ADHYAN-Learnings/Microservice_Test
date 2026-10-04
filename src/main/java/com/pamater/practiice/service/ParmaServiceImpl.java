@@ -10,18 +10,19 @@ import com.pamater.practiice.Employee;
 @Service
 public class ParmaServiceImpl implements ParamService {
 	
+	private final List<Employee> employeeList = new ArrayList<>();
+	List<Employee> employeeData = getData();
+	
 	@Override
 	public Employee getDetailsById(Long id) {
-		
-		List<Employee> employeeData = getData();
-		
-		return employeeData.stream().filter(employee->employee.getId().equals(id)).findAny().get();
+		return employeeData.stream()
+				           .filter(employee->employee.getId().equals(id))
+				           .findAny()
+				           .orElseThrow(()->new RuntimeException("No Such Element Found"));
 	}
 	
 	
 	private List<Employee> getData(){
-    
-		 List<Employee> employeeList = new ArrayList<Employee>();
 		
 		employeeList.add(new Employee(1001l,"John","Mechanical","Assistant",15000.00));
 		employeeList.add(new Employee(1002l,"Steward","Biology","Assocate",25000.00));
@@ -41,24 +42,42 @@ public class ParmaServiceImpl implements ParamService {
 		return employeeList;
 	}
 
-
 	@Override
 	public Employee getDetailsByName(String name) {
-		List<Employee> employeeData = getData();
 		return employeeData.stream().filter(employee->employee.getName().equalsIgnoreCase(name)).findAny().get();
 	}
-
 
 	@Override
 	public Employee getDetailsByNameAndDepartment(String name, String department) {
 		
-		List<Employee> employeeData = getData();
-		System.out.println("Name:"+name);
-		System.out.println("Departement::"+department);
 		return employeeData.stream()
 				           .filter(employee->employee.getName().equalsIgnoreCase(name) && 
 				        		   employee.getDepartment().equalsIgnoreCase(department))
 				           .findAny().get();
 	}
+
+	@Override
+	public boolean addDetailsById(Employee employee) {
+		boolean exists = employeeList.stream().anyMatch(emp->emp.getId().equals(employee.getId()));
+		if(exists) {
+		   return false;	
+		} 
+		employeeList.add(employee);
+		return true; 
+	}
+
+
+	@Override
+	public boolean deleteEmployeeById(Long id) {
+		return employeeList.removeIf(emp -> emp.getId().equals(id));
+	}
+
+
+	@Override
+	public List<Employee> getAllDetails() {
+		return employeeData;
+	}
+	
+	
 
 }
