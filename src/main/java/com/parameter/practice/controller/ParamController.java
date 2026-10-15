@@ -1,9 +1,9 @@
-package com.pamater.practiice.controller;
+package com.parameter.practice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.pamater.practiice.Employee;
-import com.pamater.practiice.service.ParamService;
+import com.parameter.practice.Employee;
+import com.parameter.practice.service.ParamService;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

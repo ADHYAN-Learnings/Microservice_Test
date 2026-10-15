@@ -1,4 +1,4 @@
-package com.pamater.practiice;
+package com.parameter.practice;
 
 public class Employee {
 	

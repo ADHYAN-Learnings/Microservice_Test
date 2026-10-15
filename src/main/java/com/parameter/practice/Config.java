@@ -1,13 +1,13 @@
-package com.pamater.practiice;
+package com.parameter.practice;
 
 
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.context.annotation.Configuration;
 
-import com.pamater.practiice.controller.ParamController;
-import com.pamater.practiice.controller.QueryParamController;
-import com.pamater.practiice.controller.RequestParamController;
+import com.parameter.practice.controller.ParamController;
+import com.parameter.practice.controller.QueryParamController;
+import com.parameter.practice.controller.RequestParamController;
 
 // Enable this code when you're using jersey details like @PathParm or @QueryParam
 // Comment it out when you're using mvc annotations

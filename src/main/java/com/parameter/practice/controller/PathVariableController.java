@@ -1,4 +1,4 @@
-package com.pamater.practiice.controller;
+package com.parameter.practice.controller;
 
 import java.util.List;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pamater.practiice.Employee;
-import com.pamater.practiice.service.ParamService;
+import com.parameter.practice.Employee;
+import com.parameter.practice.service.ParamService;
 
 @RestController
 @RequestMapping("/employee/pathVariable")

@@ -1,4 +1,4 @@
-package com.pamater.practiice.controller;
+package com.parameter.practice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pamater.practiice.Employee;
-import com.pamater.practiice.service.ParamService;
+import com.parameter.practice.Employee;
+import com.parameter.practice.service.ParamService;
 
 
 @RestController

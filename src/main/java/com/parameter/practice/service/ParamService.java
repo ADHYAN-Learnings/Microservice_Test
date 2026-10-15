@@ -1,8 +1,8 @@
-package com.pamater.practiice.service;
+package com.parameter.practice.service;
 
 import java.util.List;
 
-import com.pamater.practiice.Employee;
+import com.parameter.practice.Employee;
 
 public interface ParamService {
 	
